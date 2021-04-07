@@ -2,7 +2,7 @@ import falcon
 import json
 
 
-class ObjectRequestClass:
+class ObjRequestClass:
     def on_get(self, req, resp):
         content = {
             'success': 'My first falcon app',
@@ -14,4 +14,4 @@ class ObjectRequestClass:
         resp.body = json.dumps(content)
 
 api = falcon.API()
-api.add_route('/myfirstget', ObjectRequestClass)
+api.add_route('/myget', ObjRequestClass())
